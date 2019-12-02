@@ -2,7 +2,7 @@ Summary:	View information about use of system resources, like memory and disk sp
 Summary(pl.UTF-8):	Widok informacji o użyciu zasobów systemowych, takich jak pamięć czy miejsce na dysku
 Name:		gnome-usage
 Version:	3.32.0
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		Applications/System
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-usage/3.32/%{name}-%{version}.tar.xz
@@ -21,7 +21,7 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	vala
 BuildRequires:	xz
 Requires(post,postun):	glib2 >= 1:2.38
-Requires(post,postun):	gtk-update-icon-theme
+Requires(post,postun):	gtk-update-icon-cache
 Requires:	glib2 >= 1:2.38
 Requires:	gtk+3 >= 3.20.10
 Requires:	hicolor-icon-theme
