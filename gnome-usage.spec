@@ -1,24 +1,28 @@
 Summary:	View information about use of system resources, like memory and disk space
 Summary(pl.UTF-8):	Widok informacji o użyciu zasobów systemowych, takich jak pamięć czy miejsce na dysku
 Name:		gnome-usage
-Version:	3.32.0
-Release:	2
+Version:	3.38.0
+Release:	1
 License:	GPL v3+
 Group:		Applications/System
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-usage/3.32/%{name}-%{version}.tar.xz
-# Source0-md5:	41fe4f9d9d33709d8fcb5538c51ba40b
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-usage/3.38/%{name}-%{version}.tar.xz
+# Source0-md5:	a331e1b6d8f588c02440be1972097c62
 URL:		https://wiki.gnome.org/Apps/Usage
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.38
 BuildRequires:	gtk+3-devel >= 3.20.10
 BuildRequires:	libdazzle-devel >= 3.30
 BuildRequires:	libgtop-devel >= 1:2.34.0
-BuildRequires:	meson >= 0.37.0
+BuildRequires:	libhandy1-devel >= 1.0.0
+BuildRequires:	meson >= 0.50.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
+BuildRequires:	tracker3-devel >= 3.0
 BuildRequires:	vala
+BuildRequires:	vala-libhandy1 >= 1.0.0
+BuildRequires:	vala-tracker3 >= 3.0
 BuildRequires:	xz
 Requires(post,postun):	glib2 >= 1:2.38
 Requires(post,postun):	gtk-update-icon-cache
@@ -27,6 +31,8 @@ Requires:	gtk+3 >= 3.20.10
 Requires:	hicolor-icon-theme
 Requires:	libdazzle >= 3.30
 Requires:	libgtop >= 1:2.34.0
+Requires:	libhandy1 >= 1.0.0
+Requires:	tracker3 >= 3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
