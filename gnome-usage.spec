@@ -2,7 +2,7 @@ Summary:	View information about use of system resources, like memory and disk sp
 Summary(pl.UTF-8):	Widok informacji o użyciu zasobów systemowych, takich jak pamięć czy miejsce na dysku
 Name:		gnome-usage
 Version:	3.38.1
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		Applications/System
 Source0:	https://download.gnome.org/sources/gnome-usage/3.38/%{name}-%{version}.tar.xz
