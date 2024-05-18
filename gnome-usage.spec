@@ -2,17 +2,17 @@
 Summary:	View information about use of system resources, like memory and disk space
 Summary(pl.UTF-8):	Widok informacji o użyciu zasobów systemowych, takich jak pamięć czy miejsce na dysku
 Name:		gnome-usage
-Version:	45.0
+Version:	46.0
 Release:	1
 License:	GPL v3+
 Group:		Applications/System
-Source0:	https://download.gnome.org/sources/gnome-usage/45/%{name}-%{version}.tar.xz
-# Source0-md5:	f4e1c6b72cc5a5e98787e6fe9ee8c07b
+Source0:	https://download.gnome.org/sources/gnome-usage/46/%{name}-%{version}.tar.xz
+# Source0-md5:	b31da091e99e1092a424527786bba736
 URL:		https://wiki.gnome.org/Apps/Usage
 BuildRequires:	gettext-tools
-BuildRequires:	glib2-devel >= 1:2.44
+BuildRequires:	glib2-devel >= 1:2.74
 BuildRequires:	gtk4-devel >= 4.11.3
-BuildRequires:	libadwaita-devel >= 1.4
+BuildRequires:	libadwaita-devel >= 1.5
 BuildRequires:	libgee-devel >= 0.8
 BuildRequires:	libgtop-devel >= 1:2.34.0
 BuildRequires:	meson >= 0.50.0
@@ -22,15 +22,15 @@ BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	tracker3-devel >= 3.0
 BuildRequires:	vala
-BuildRequires:	vala-libadwaita >= 1.4
+BuildRequires:	vala-libadwaita >= 1.5
 BuildRequires:	vala-tracker3 >= 3.0
 BuildRequires:	xz
-Requires(post,postun):	glib2 >= 1:2.44
+Requires(post,postun):	glib2 >= 1:2.74
 Requires(post,postun):	gtk-update-icon-cache
-Requires:	glib2 >= 1:2.44
+Requires:	glib2 >= 1:2.74
 Requires:	gtk4 >= 4.11.3
 Requires:	hicolor-icon-theme
-Requires:	libadwaita >= 1.4
+Requires:	libadwaita >= 1.5
 Requires:	libgtop >= 1:2.34.0
 Requires:	tracker3 >= 3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
