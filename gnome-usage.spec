@@ -2,12 +2,12 @@
 Summary:	View information about use of system resources, like memory and disk space
 Summary(pl.UTF-8):	Widok informacji o użyciu zasobów systemowych, takich jak pamięć czy miejsce na dysku
 Name:		gnome-usage
-Version:	46.0
-Release:	2
+Version:	46.1
+Release:	1
 License:	GPL v3+
 Group:		Applications/System
 Source0:	https://download.gnome.org/sources/gnome-usage/46/%{name}-%{version}.tar.xz
-# Source0-md5:	b31da091e99e1092a424527786bba736
+# Source0-md5:	a832ba0ea2b958bf8cb50c5cac9b7900
 URL:		https://wiki.gnome.org/Apps/Usage
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.74
@@ -18,7 +18,7 @@ BuildRequires:	libgtop-devel >= 1:2.34.0
 BuildRequires:	meson >= 0.50.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	tracker3-devel >= 3.0
 BuildRequires:	vala
@@ -57,14 +57,14 @@ Główne możliwości:
 %setup -q
 
 %build
-%meson build
+%meson
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 %find_lang %{name}
 
