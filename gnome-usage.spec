@@ -23,6 +23,7 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	tracker3-devel >= 3.0
 BuildRequires:	vala
 BuildRequires:	vala-libadwaita >= 1.5
+BuildRequires:	vala-libgee >= 0.8
 BuildRequires:	vala-tracker3 >= 3.0
 BuildRequires:	xz
 Requires(post,postun):	glib2 >= 1:2.74
