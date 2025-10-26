@@ -2,17 +2,19 @@
 Summary:	View information about use of system resources, like memory and disk space
 Summary(pl.UTF-8):	Widok informacji o użyciu zasobów systemowych, takich jak pamięć czy miejsce na dysku
 Name:		gnome-usage
-Version:	46.1
+Version:	48.0
 Release:	1
 License:	GPL v3+
 Group:		Applications/System
-Source0:	https://download.gnome.org/sources/gnome-usage/46/%{name}-%{version}.tar.xz
-# Source0-md5:	a832ba0ea2b958bf8cb50c5cac9b7900
+Source0:	https://download.gnome.org/sources/gnome-usage/48/%{name}-%{version}.tar.xz
+# Source0-md5:	ec95a6777fd9474f197e5df593c395d1
 URL:		https://wiki.gnome.org/Apps/Usage
+BuildRequires:	NetworkManager-devel >= 2:1.44.0
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.74
 BuildRequires:	gtk4-devel >= 4.11.3
-BuildRequires:	libadwaita-devel >= 1.5
+BuildRequires:	json-glib-devel
+BuildRequires:	libadwaita-devel >= 1.6
 BuildRequires:	libgee-devel >= 0.8
 BuildRequires:	libgtop-devel >= 1:2.34.0
 BuildRequires:	meson >= 0.50.0
@@ -20,20 +22,20 @@ BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	tracker3-devel >= 3.0
+BuildRequires:	tinysparql-devel >= 3.0
 BuildRequires:	vala
-BuildRequires:	vala-libadwaita >= 1.5
+BuildRequires:	vala-libadwaita >= 1.6
 BuildRequires:	vala-libgee >= 0.8
-BuildRequires:	vala-tracker3 >= 3.0
+BuildRequires:	vala-tinysparql >= 3.0
 BuildRequires:	xz
 Requires(post,postun):	glib2 >= 1:2.74
 Requires(post,postun):	gtk-update-icon-cache
 Requires:	glib2 >= 1:2.74
 Requires:	gtk4 >= 4.11.3
 Requires:	hicolor-icon-theme
-Requires:	libadwaita >= 1.5
+Requires:	libadwaita >= 1.6
 Requires:	libgtop >= 1:2.34.0
-Requires:	tracker3 >= 3.0
+Requires:	tinysparql >= 3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -85,6 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README.md
 %attr(755,root,root) %{_bindir}/gnome-usage
 %{_datadir}/glib-2.0/schemas/org.gnome.Usage.gschema.xml
-%{_datadir}/metainfo/org.gnome.Usage.appdata.xml
+%{_datadir}/metainfo/org.gnome.Usage.metainfo.xml
 %{_desktopdir}/org.gnome.Usage.desktop
 %{_iconsdir}/hicolor/scalable/apps/org.gnome.Usage.svg
