@@ -24,6 +24,7 @@ BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	tinysparql-devel >= 3.0
 BuildRequires:	vala
+BuildRequires:	vala-NetworkManager >= 2:1.44.0
 BuildRequires:	vala-libadwaita >= 1.6
 BuildRequires:	vala-libgee >= 0.8
 BuildRequires:	vala-tinysparql >= 3.0
